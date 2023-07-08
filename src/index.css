@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-.container{
-    padding: 3em;
-    background: #e5e5e5;
+.contenedor {
+    min-height: 100vh;
 }

@@ -34,6 +34,9 @@ const ListTask = ({ tasks, setTasks }) => {
 
     updateColumnTasks(sourceColumn, sourceTasks);
     updateColumnTasks(destinationColumn, destinationTasks);
+
+    toast("Nuevo Status de la Tarea", { icon: "😎" });
+    
   };
 
   const getColumnById = (id) => {
@@ -85,6 +88,7 @@ const ListTask = ({ tasks, setTasks }) => {
   );
 };
 
+
 const Section = ({ status, tasks, setTasks, todos, inProgress, closed }) => {
   let text = "Pendientes";
   let bg = "bg-red-400";
@@ -102,8 +106,9 @@ const Section = ({ status, tasks, setTasks, todos, inProgress, closed }) => {
     tasksToMap = closed;
   }
 
+
   return (
-    <div className={`w-64 h-96 min-h-96 rounded-md p-2 bg-neutral-300`}>
+    <div className={`w-64 rounded-md p-2`}>
       <Header text={text} bg={bg} count={tasksToMap.length} />
       <Droppable droppableId={status}>
         {(provided) => (
