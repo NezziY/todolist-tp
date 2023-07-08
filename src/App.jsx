@@ -20,7 +20,7 @@ function App() {
     }, []);
 
   return (
-    <div className='contenedor'>
+    <div className='pantalla-principal min-h-screen'>
       <Toaster />
         <div className='bg-neutral-400 min-w-[1024px] flex justify-around items-end h-32 py-8'>
           <SetDate />
